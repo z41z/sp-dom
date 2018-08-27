@@ -1,0 +1,33 @@
+{
+  "name": "sp-fe-dom",
+  "version": "1.0.1",
+  "description": "Common operations for HTML DOM Elements.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production --config ./config/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r3qu3stt1me0ut/sp-fe-dom.git"
+  },
+  "keywords": [
+    "html",
+    "dom",
+    "elements",
+    "class",
+    "querySelector",
+    "selector"
+  ],
+  "author": "sp-fe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/r3qu3stt1me0ut/sp-fe-dom/issues"
+  },
+  "homepage": "https://github.com/r3qu3stt1me0ut/sp-fe-dom#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}

@@ -1,6 +1,11 @@
 const toggleClass = (selector, className) => {
-  document.querySelectorAll(selector).forEach(item => {
-    item.classList.toggle(className);
-  })
+  if (selector instanceof Element) {
+    selector.classList.toggle(className);
+  }
+  else{
+    document.querySelectorAll(selector).forEach(item => {
+      item.classList.toggle(className);
+    })
+  }
 };
 module.exports = toggleClass;

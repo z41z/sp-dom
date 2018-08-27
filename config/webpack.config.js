@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "../"),
     filename: 'index.min.js',
-    library: "_DOM",
+    library: "__DOM",
   },
   resolve: {
     extensions: ['.js']

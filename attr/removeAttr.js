@@ -9,7 +9,7 @@ const removeAttr = (selector, attrName) => {
     selector.removeAttribute(attrName);
   } else {
     let selectorList = document.querySelectorAll(selector)
-    if (selectorList.length) {
+    if (selectorList) {
       selectorList.forEach(item => {
         item.removeAttribute(attrName);
       })

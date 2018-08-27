@@ -13,7 +13,7 @@ const attr = (selector, attrName, value) => {
     }
   } else {
     let selectorList = document.querySelectorAll(selector)
-    if (selectorList.length) {
+    if (selectorList) {
       if (value !== undefined) {
         selectorList.forEach(item => {
           item.setAttribute(attrName, value);

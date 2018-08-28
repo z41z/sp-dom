@@ -1,9 +1,18 @@
+/**
+ * 
+ * @param {String,Node} selector 
+ */
+
+const {
+  isElement
+} = require('../common/index');
+
 const eclass = (selector) => {
-  if (selector instanceof Element) {
+  if (isElement(selector)) {
     return selector.className;
   }
   let selectorEle = document.querySelector(selector);
-  if(selectorEle){
+  if (selectorEle) {
     return selectorEle.className;
   }
 }

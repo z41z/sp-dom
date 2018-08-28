@@ -1,7 +1,6 @@
 /**
  * 
- * @param {String,Node,Nodelist} selector 
- * @param {String} className 
+ * @param {String,Node,NodeList} selector 
  */
 
 const {
@@ -9,16 +8,17 @@ const {
   isNodeList
 } = require('../common/index');
 
-const removeClass = (selector, className) => {
+const remove = (selector) => {
   if (isElement(selector)) {
-    selector.classList.remove(className);
+    selector.remove();
   } else {
     let selectorList = isNodeList(selector) ? selector : document.querySelectorAll(selector);
-    if (selectorList) {
+    if (selectorList.length) {
       selectorList.forEach(item => {
-        item.classList.remove(className);
+        item.remove();
       })
     }
   }
 };
-module.exports = removeClass;
+
+module.exports = remove;

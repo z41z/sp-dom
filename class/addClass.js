@@ -1,8 +1,19 @@
+/**
+ * 
+ * @param {String,Node,Nodelist} selector 
+ * @param {*} className 
+ */
+
+const {
+  isElement,
+  isNodeList
+} = require('../common/index');
+
 const addClass = (selector, className) => {
-  if (selector instanceof Element) {
+  if (isElement(selector)) {
     selector.classList.add(className);
   } else {
-    let selectorList = document.querySelectorAll(selector);
+    let selectorList = isNodeList(selector) ? selector : document.querySelectorAll(selector);
     if (selectorList) {
       selectorList.forEach(item => {
         item.classList.add(className);

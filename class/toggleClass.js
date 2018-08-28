@@ -1,8 +1,19 @@
+/**
+ * 
+ * @param {String,Node,NodeList} selector 
+ * @param {String} className 
+ */
+
+const {
+  isElement,
+  isNodeList
+} = require('../common/index');
+
 const toggleClass = (selector, className) => {
-  if (selector instanceof Element) {
+  if (isElement(selector)) {
     selector.classList.toggle(className);
   } else {
-    let selectorList = document.querySelectorAll(selector);
+    let selectorList = isNodeList(selector) ? selector : document.querySelectorAll(selector);
     if (selectorList) {
       selectorList.forEach(item => {
         item.classList.toggle(className);

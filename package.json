@@ -1,6 +1,6 @@
 {
   "name": "sp-fe-dom",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Common operations for HTML DOM Elements.",
   "main": "index.js",
   "scripts": {

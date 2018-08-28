@@ -4,15 +4,20 @@
  * @param {String} attrName 
  * @param {*} value 
  */
+const {
+  isElement,
+  isNodeList
+} = require('../common/index');
+
 const attr = (selector, attrName, value) => {
-  if (selector instanceof Element) {
+  if (isElement(selector)) {
     if (value !== undefined) {
       selector.setAttribute(attrName, value);
     } else {
       return selector.getAttribute(attrName);
     }
   } else {
-    let selectorList = document.querySelectorAll(selector)
+    let selectorList = isNodeList(selector) ? selector : document.querySelectorAll(selector);
     if (selectorList) {
       if (value !== undefined) {
         selectorList.forEach(item => {
@@ -25,5 +30,6 @@ const attr = (selector, attrName, value) => {
       return null;
     }
   }
-}
+};
+
 module.exports = attr;

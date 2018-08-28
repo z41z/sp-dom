@@ -4,11 +4,17 @@
  * @param {String} attrName 
  * @param {*} value 
  */
+
+const {
+  isElement,
+  isNodeList
+} = require('../common/index');
+
 const removeAttr = (selector, attrName) => {
-  if (selector instanceof Element) {
+  if (isElement(selector)) {
     selector.removeAttribute(attrName);
   } else {
-    let selectorList = document.querySelectorAll(selector)
+    let selectorList = isNodeList(selector) ? selector : document.querySelectorAll(selector);
     if (selectorList) {
       selectorList.forEach(item => {
         item.removeAttribute(attrName);

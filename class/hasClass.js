@@ -1,5 +1,15 @@
+/**
+ * 
+ * @param {String,Node} selector 
+ * @param {String} className 
+ */
+
+const {
+  isElement
+} = require('../common/index');
+
 const hasClass = (selector, className) => {
-  if (selector instanceof Element) {
+  if (isElement(selector)) {
     return selector.classList.contains(className);
   }
   let selectorEle = document.querySelector(selector);

@@ -9,7 +9,7 @@ const css = (selector, cssValue) => {
       return getComputedStyle(selector).getPropertyValue(cssValue);
     }
   } else {
-    let selectorList = document.querySelectorAll(selector);
+    let selectorList = selector instanceof NodeList ? selector : document.querySelectorAll(selector);
     if (selectorList) {
       if (hasSetCssValue) {
         selectorList.forEach(item => {

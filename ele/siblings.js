@@ -14,7 +14,7 @@ const siblings = (selector) => {
     let siblings = selector.parentNode.childNodes;
     if (siblings.length) {
       siblings.forEach(item => {
-        if (item.nodeType === 1 && item !== selector) {
+        if (item.nodeType === 1 && item !== selector) { //remove itself
           result.push(item)
         }
       })
@@ -27,7 +27,7 @@ const siblings = (selector) => {
         let siblings = item.parentNode.childNodes;
         if (siblings.length > 1) {
           siblings.forEach((i, index) => {
-            if (i.nodeType === 1 && index !== 0) {
+            if (i.nodeType === 1 && index !== 0) { //remove first
               if (result.indexOf(i) < 0) {
                 result.push(i);
               }

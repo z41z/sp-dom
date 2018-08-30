@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r3qu3stt1me0ut/sp-fe-dom.git"
+    "url": "git+https://github.com/isecfe/sp-fe-dom.git"
   },
   "keywords": [
     "html",
@@ -21,9 +21,9 @@
   "author": "sp-fe",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/r3qu3stt1me0ut/sp-fe-dom/issues"
+    "url": "https://github.com/isecfe/sp-fe-dom/issues"
   },
-  "homepage": "https://github.com/r3qu3stt1me0ut/sp-fe-dom#readme",
+  "homepage": "https://github.com/isecfe/sp-fe-dom#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

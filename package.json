@@ -1,5 +1,5 @@
 {
-  "name": "sp-fe-dom",
+  "name": "sp-dom",
   "version": "1.0.5",
   "description": "Common operations for HTML DOM Elements.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isecfe/sp-fe-dom.git"
+    "url": "git+https://github.com/z41z/sp-dom.git"
   },
   "keywords": [
     "html",
@@ -21,9 +21,9 @@
   "author": "sp-fe",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/isecfe/sp-fe-dom/issues"
+    "url": "https://github.com/z41z/sp-dom/issues"
   },
-  "homepage": "https://github.com/isecfe/sp-fe-dom#readme",
+  "homepage": "https://github.com/z41z/sp-dom#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

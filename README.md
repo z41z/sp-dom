@@ -1,2 +1,3 @@
-# sp-fe-dom
+# sp-dom
+
 Common operations for HTML DOM Elements.

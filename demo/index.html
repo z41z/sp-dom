@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM Demo</title>
+  <style>
+    .color-red {
+      color: #f00;
+      font-size: 20px;
+    }
+
+    .dom {
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="dom" class="dom">
+    <div class="children">_DOM</div>
+  </div>
+  <div id="result"></div>
+  <button onclick="attr()">设置属性</button>
+  <button onclick="removeAttr()">删除属性</button>
+  <button onclick="addClass()">添加样式类</button>
+  <button onclick="removeClass()">删除样式类</button>
+  <button onclick="toggleClass()">Toggle样式类</button>
+  <button onclick="eclass()">获取样式</button>
+  <button onclick="text()">获取文本</button>
+  <button onclick="setText()">设置文本</button>
+  <button onclick="html()">获取HTML</button>
+  <button onclick="setHtml()">设置HTML</button>
+  <button onclick="css()">获取样式font-size</button>
+  <button onclick="setCss()">设置样式</button>
+  <script src="../index.min.js"></script>
+  <script>
+    function attr() {
+      __DOM.attr('#dom', 'data-attr', 'test')
+    }
+    function removeAttr() {
+      __DOM.removeAttr('#dom', 'data-attr')
+    }
+    function addClass() {
+      __DOM.addClass('#dom', 'color-red')
+    }
+    function removeClass() {
+      __DOM.removeClass('#dom', 'color-red')
+    }
+    function toggleClass() {
+      __DOM.toggleClass('#dom', 'color-red')
+    }
+    function eclass() {
+      __DOM.text('#result', __DOM.class('#dom'))
+    }
+    function text() {
+      alert(__DOM.text('#dom'))
+    }
+    function setText() {
+      __DOM.text('#dom', 'newTest')
+    }
+    function html() {
+      alert(__DOM.html('#dom'))
+    }
+    function setHtml() {
+      __DOM.html('#dom', `<h2>setHtml</h2>`)
+    }
+    function css() {
+      __DOM.text('#dom', __DOM.css('#dom', 'font-size'))
+    }
+    function setCss() {
+      __DOM.text('#dom', __DOM.css('#dom', {
+        fontSize: '30px',
+        color: '#00aeff'
+      }))
+    }
+
+  </script>
+</body>
+
+</html>
